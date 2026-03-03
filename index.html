@@ -11,32 +11,64 @@
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- ===== DRAWER NAVIGATION (Mobile) ===== -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer-header">
+      <span class="logo-icon">&#9986;</span>
+      <span class="logo-text">Stylefactory</span>
+      <button class="drawer-close" id="drawerClose" aria-label="Menü schließen">&times;</button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#hero" class="drawer-link">Startseite</a>
+      <a href="#services" class="drawer-link">Leistungen</a>
+      <a href="#gallery" class="drawer-link">Galerie</a>
+      <a href="#booking" class="drawer-link">Termin buchen</a>
+      <a href="#team" class="drawer-link">Unser Team</a>
+      <a href="#testimonials" class="drawer-link">Bewertungen</a>
+      <a href="#faq" class="drawer-link">FAQ</a>
+      <a href="#contact" class="drawer-link">Kontakt</a>
+    </nav>
+    <div class="drawer-footer">
+      <p>Mo – Fr: 9 – 19 Uhr</p>
+      <p>Sa: 9 – 16 Uhr</p>
+      <a href="tel:+493012345678" class="btn btn-primary btn-sm">Anrufen</a>
+    </div>
+  </aside>
+
+  <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#hero" class="logo">
         <span class="logo-icon">&#9986;</span>
         <span class="logo-text">Stylefactory</span>
       </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services" data-nav>Leistungen</a></li>
+        <li><a href="#gallery" data-nav>Galerie</a></li>
+        <li><a href="#booking" data-nav>Termin buchen</a></li>
+        <li><a href="#team" data-nav>Team</a></li>
+        <li><a href="#faq" data-nav>FAQ</a></li>
+        <li><a href="#contact" data-nav>Kontakt</a></li>
+      </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#services">Leistungen</a></li>
-        <li><a href="#booking">Termin buchen</a></li>
-        <li><a href="#about">Über uns</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
+    <div class="hero-particles" id="heroParticles"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Willkommen bei<br><span class="highlight">Stylefactory</span></h1>
-      <p class="hero-subtitle">Dein Styling. Dein Statement. Dein Studio.</p>
-      <a href="#booking" class="btn btn-primary">Jetzt Termin buchen</a>
+      <div class="badge badge-accent animate-fade-in">Seit 2015 in Berlin</div>
+      <h1 class="animate-fade-in-up">Willkommen bei<br><span class="highlight">Stylefactory</span></h1>
+      <p class="hero-subtitle animate-fade-in-up delay-1">Dein Styling. Dein Statement. Dein Studio.</p>
+      <div class="hero-actions animate-fade-in-up delay-2">
+        <a href="#booking" class="btn btn-primary btn-lg">Jetzt Termin buchen</a>
+        <a href="#services" class="btn btn-ghost btn-lg">Unsere Leistungen</a>
+      </div>
     </div>
     <div class="hero-scroll">
       <span>Scroll</span>
@@ -44,7 +76,7 @@
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- ===== SERVICES ===== -->
   <section class="services" id="services">
     <div class="container">
       <div class="section-header">
@@ -52,93 +84,107 @@
         <h2>Was wir für dich tun</h2>
         <p>Von klassisch bis trendig – wir bringen deinen Style auf das nächste Level.</p>
       </div>
-      <div class="services-grid">
 
-        <div class="service-card">
-          <div class="service-icon">&#9986;</div>
-          <h3>Herrenschnitt</h3>
-          <div class="service-meta">
-            <span class="service-duration">15 Min.</span>
-            <span class="service-price">25 €</span>
-          </div>
-          <p>Klassischer oder moderner Schnitt – perfekt auf dich abgestimmt.</p>
-        </div>
+      <!-- Segmented Control / Tab Filter -->
+      <div class="segmented-control" id="serviceFilter">
+        <button class="segment active" data-filter="all">Alle</button>
+        <button class="segment" data-filter="schnitt">Schnitt</button>
+        <button class="segment" data-filter="farbe">Farbe</button>
+        <button class="segment" data-filter="styling">Styling</button>
+        <button class="segment" data-filter="pflege">Pflege</button>
+      </div>
 
-        <div class="service-card">
-          <div class="service-icon">&#10024;</div>
-          <h3>Damenschnitt</h3>
-          <div class="service-meta">
-            <span class="service-duration">45 Min.</span>
-            <span class="service-price">45 €</span>
-          </div>
-          <p>Waschen, schneiden, föhnen – für deinen perfekten Look.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">&#127912;</div>
-          <h3>Färben / Strähnen</h3>
-          <div class="service-meta">
-            <span class="service-duration">90 Min.</span>
-            <span class="service-price">75 €</span>
-          </div>
-          <p>Frische Farbe oder natürliche Highlights für strahlende Haare.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">&#128161;</div>
-          <h3>Balayage</h3>
-          <div class="service-meta">
-            <span class="service-duration">120 Min.</span>
-            <span class="service-price">120 €</span>
-          </div>
-          <p>Natürlicher Farbverlauf für einen sonnengeküssten Look.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">&#127744;</div>
-          <h3>Dauerwelle</h3>
-          <div class="service-meta">
-            <span class="service-duration">120 Min.</span>
-            <span class="service-price">95 €</span>
-          </div>
-          <p>Volumen und Locken, die halten – von natürlichen Wellen bis Korkenzieher.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">&#128134;</div>
-          <h3>Bartpflege</h3>
-          <div class="service-meta">
-            <span class="service-duration">20 Min.</span>
-            <span class="service-price">18 €</span>
-          </div>
-          <p>Bartschnitt, Kontur und Pflege – für den gepflegten Gentleman.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">&#128131;</div>
-          <h3>Hochsteckfrisur</h3>
-          <div class="service-meta">
-            <span class="service-duration">60 Min.</span>
-            <span class="service-price">65 €</span>
-          </div>
-          <p>Für Hochzeiten, Events und besondere Anlässe – elegante Updos.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">&#9889;</div>
-          <h3>Keratin-Behandlung</h3>
-          <div class="service-meta">
-            <span class="service-duration">90 Min.</span>
-            <span class="service-price">110 €</span>
-          </div>
-          <p>Glattes, seidiges Haar ohne Frizz – bis zu 3 Monate Wirkung.</p>
-        </div>
-
+      <div class="services-grid" id="servicesGrid">
+        <!-- Filled by JS -->
       </div>
     </div>
   </section>
 
-  <!-- Booking Section -->
+  <!-- ===== GALLERY CAROUSEL ===== -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Galerie</span>
+        <h2>Unsere Arbeiten</h2>
+        <p>Ein Blick auf unsere neuesten Kreationen.</p>
+      </div>
+      <div class="carousel" id="galleryCarousel">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide">
+            <div class="gallery-card">
+              <div class="gallery-img" style="background: linear-gradient(135deg, #2a1a0e, #4a3020);">
+                <span>&#9986;</span>
+              </div>
+              <div class="gallery-info">
+                <span class="badge badge-small">Herrenschnitt</span>
+                <p>Classic Fade</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="gallery-card">
+              <div class="gallery-img" style="background: linear-gradient(135deg, #1a1a2e, #3a2a4e);">
+                <span>&#10024;</span>
+              </div>
+              <div class="gallery-info">
+                <span class="badge badge-small">Balayage</span>
+                <p>Honey Highlights</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="gallery-card">
+              <div class="gallery-img" style="background: linear-gradient(135deg, #0e2a1a, #205040);">
+                <span>&#127912;</span>
+              </div>
+              <div class="gallery-info">
+                <span class="badge badge-small">Färben</span>
+                <p>Copper Dream</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="gallery-card">
+              <div class="gallery-img" style="background: linear-gradient(135deg, #2a0e1a, #4a2030);">
+                <span>&#128131;</span>
+              </div>
+              <div class="gallery-info">
+                <span class="badge badge-small">Hochsteckfrisur</span>
+                <p>Bridal Elegance</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="gallery-card">
+              <div class="gallery-img" style="background: linear-gradient(135deg, #1a1a0e, #3a3020);">
+                <span>&#127744;</span>
+              </div>
+              <div class="gallery-info">
+                <span class="badge badge-small">Dauerwelle</span>
+                <p>Beach Waves</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="gallery-card">
+              <div class="gallery-img" style="background: linear-gradient(135deg, #0e1a2a, #203a50);">
+                <span>&#128134;</span>
+              </div>
+              <div class="gallery-info">
+                <span class="badge badge-small">Bartpflege</span>
+                <p>Gentleman Trim</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Vorheriges Bild">&#8249;</button>
+        <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Nächstes Bild">&#8250;</button>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOOKING ===== -->
   <section class="booking" id="booking">
     <div class="container">
       <div class="section-header">
@@ -148,18 +194,18 @@
       </div>
 
       <div class="booking-container">
-        <!-- Step Indicator -->
+        <!-- Progress Stepper -->
         <div class="booking-steps">
           <div class="step active" data-step="1">
             <div class="step-number">1</div>
             <span>Leistung</span>
           </div>
-          <div class="step-line"></div>
+          <div class="step-line"><div class="step-line-fill"></div></div>
           <div class="step" data-step="2">
             <div class="step-number">2</div>
             <span>Datum & Zeit</span>
           </div>
-          <div class="step-line"></div>
+          <div class="step-line"><div class="step-line-fill"></div></div>
           <div class="step" data-step="3">
             <div class="step-number">3</div>
             <span>Bestätigung</span>
@@ -169,14 +215,18 @@
         <!-- Step 1: Service Selection -->
         <div class="booking-step" id="step1">
           <h3>Wähle deine Leistung</h3>
-          <div class="service-select-grid" id="serviceSelect">
-            <!-- Filled by JS -->
+          <div class="search-input-wrap">
+            <span class="search-icon">&#128269;</span>
+            <input type="text" class="search-input" id="serviceSearch" placeholder="Leistung suchen...">
           </div>
+          <div class="service-select-grid" id="serviceSelect"></div>
         </div>
 
         <!-- Step 2: Date & Time -->
         <div class="booking-step hidden" id="step2">
           <h3>Wähle Datum & Uhrzeit</h3>
+          <!-- Selected service summary badge -->
+          <div class="selected-service-badge" id="selectedServiceBadge"></div>
           <div class="datetime-container">
             <div class="calendar-wrapper">
               <div class="calendar-header">
@@ -227,9 +277,18 @@
             </div>
           </div>
           <div class="confirm-form">
-            <input type="text" id="customerName" placeholder="Dein Name" required>
-            <input type="tel" id="customerPhone" placeholder="Telefonnummer" required>
-            <input type="email" id="customerEmail" placeholder="E-Mail (optional)">
+            <div class="input-group">
+              <label for="customerName">Name *</label>
+              <input type="text" id="customerName" placeholder="Max Mustermann" required>
+            </div>
+            <div class="input-group">
+              <label for="customerPhone">Telefon *</label>
+              <input type="tel" id="customerPhone" placeholder="0170 1234567" required>
+            </div>
+            <div class="input-group">
+              <label for="customerEmail">E-Mail</label>
+              <input type="email" id="customerEmail" placeholder="max@beispiel.de">
+            </div>
           </div>
           <div class="booking-nav">
             <button class="btn btn-outline" id="backToStep2">Zurück</button>
@@ -250,41 +309,199 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about" id="about">
+  <!-- ===== TEAM (Avatars) ===== -->
+  <section class="team" id="team">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-image">
-          <div class="about-image-placeholder">
-            <span>&#9986;</span>
-            <p>Stylefactory</p>
+      <div class="section-header">
+        <span class="section-tag">Unser Team</span>
+        <h2>Die Menschen hinter deinem Style</h2>
+        <p>Leidenschaft, Kreativität und jahrelange Erfahrung.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="avatar avatar-lg">
+            <div class="avatar-img" style="background: linear-gradient(135deg, #c8a97e, #a88b60);">S</div>
+            <span class="avatar-status online"></span>
+          </div>
+          <h4>Sarah Müller</h4>
+          <span class="badge badge-small">Inhaberin & Stylistin</span>
+          <p>Spezialisiert auf Balayage und moderne Farbtechniken. 12 Jahre Erfahrung.</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar avatar-lg">
+            <div class="avatar-img" style="background: linear-gradient(135deg, #6e8ca8, #4a6e88);">M</div>
+            <span class="avatar-status online"></span>
+          </div>
+          <h4>Marco Rossi</h4>
+          <span class="badge badge-small">Senior Stylist</span>
+          <p>Experte für Herrenschnitte und Bartpflege. Präzision ist seine Leidenschaft.</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar avatar-lg">
+            <div class="avatar-img" style="background: linear-gradient(135deg, #a87ec8, #886ab0);">L</div>
+            <span class="avatar-status online"></span>
+          </div>
+          <h4>Lisa Chen</h4>
+          <span class="badge badge-small">Farb-Spezialistin</span>
+          <p>Meisterin der Dauerwellen und kreativen Farbverläufe. Immer up to date.</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar avatar-lg">
+            <div class="avatar-img" style="background: linear-gradient(135deg, #8ca87e, #6e8860);">T</div>
+            <span class="avatar-status"></span>
+          </div>
+          <h4>Tim Berger</h4>
+          <span class="badge badge-small">Junior Stylist</span>
+          <p>Frisch aus der Ausbildung – bringt frische Ideen und neuen Wind ins Team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS CAROUSEL ===== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Bewertungen</span>
+        <h2>Das sagen unsere Kunden</h2>
+      </div>
+      <div class="testimonial-carousel" id="testimonialCarousel">
+        <div class="testimonial-track" id="testimonialTrack">
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote>"Bester Friseur in Berlin! Sarah hat meine Haare in ein Kunstwerk verwandelt. Balayage perfekt umgesetzt."</blockquote>
+              <div class="testimonial-author">
+                <div class="avatar avatar-sm">
+                  <div class="avatar-img" style="background:#c8a97e;">A</div>
+                </div>
+                <div>
+                  <strong>Anna K.</strong>
+                  <span>Stammkundin seit 2019</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote>"Super Atmosphäre, nettes Team und mein Herrenschnitt sieht immer top aus. Kann ich nur empfehlen!"</blockquote>
+              <div class="testimonial-author">
+                <div class="avatar avatar-sm">
+                  <div class="avatar-img" style="background:#6e8ca8;">J</div>
+                </div>
+                <div>
+                  <strong>Jan M.</strong>
+                  <span>Stammkunde seit 2021</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote>"Meine Dauerwelle ist absolut perfekt geworden! Lisa hat sich wirklich Zeit genommen für die Beratung."</blockquote>
+              <div class="testimonial-author">
+                <div class="avatar avatar-sm">
+                  <div class="avatar-img" style="background:#a87ec8;">M</div>
+                </div>
+                <div>
+                  <strong>Maria S.</strong>
+                  <span>Kundin seit 2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+              <blockquote>"Die Online-Buchung ist super einfach und die Keratin-Behandlung hat Wunder gewirkt. Komme definitiv wieder!"</blockquote>
+              <div class="testimonial-author">
+                <div class="avatar avatar-sm">
+                  <div class="avatar-img" style="background:#8ca87e;">L</div>
+                </div>
+                <div>
+                  <strong>Lena W.</strong>
+                  <span>Kundin seit 2024</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="about-content">
-          <span class="section-tag">Über uns</span>
-          <h2>Mehr als nur ein Haarschnitt</h2>
-          <p>Bei <strong>Stylefactory</strong> steht dein individueller Style im Mittelpunkt. Unser erfahrenes Team aus leidenschaftlichen Stylisten verbindet handwerkliches Können mit aktuellen Trends.</p>
-          <p>In unserem modernen Studio erwartet dich eine entspannte Atmosphäre, in der du dich wohlfühlen kannst – von der Beratung bis zum fertigen Ergebnis.</p>
-          <div class="about-stats">
-            <div class="stat">
-              <span class="stat-number">10+</span>
-              <span class="stat-label">Jahre Erfahrung</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">5.000+</span>
-              <span class="stat-label">Zufriedene Kunden</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">4</span>
-              <span class="stat-label">Top-Stylisten</span>
-            </div>
+        <button class="carousel-btn carousel-prev" id="testPrev" aria-label="Vorherige Bewertung">&#8249;</button>
+        <button class="carousel-btn carousel-next" id="testNext" aria-label="Nächste Bewertung">&#8250;</button>
+        <div class="carousel-dots" id="testDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ACCORDION ===== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2>Häufig gestellte Fragen</h2>
+      </div>
+      <div class="accordion" id="accordion">
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Muss ich vorab einen Termin buchen?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Wir empfehlen eine Terminbuchung über unsere Website oder telefonisch. So vermeidest du Wartezeiten. Spontanbesuche sind aber auch willkommen – je nach Verfügbarkeit.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Wie lange dauert eine Dauerwelle?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Eine Dauerwelle dauert ca. 2 Stunden inklusive Beratung, Einwirkzeit und Styling. Die genaue Dauer hängt von Haarlänge und gewünschtem Ergebnis ab.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Kann ich meinen Termin stornieren oder umbuchen?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Ja, bitte sage deinen Termin mindestens 24 Stunden vorher ab. Umbuchen ist jederzeit telefonisch oder über unsere Website möglich.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Welche Zahlungsmethoden akzeptiert ihr?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Wir akzeptieren Bargeld, EC-Karte und Kreditkarte. Apple Pay und Google Pay sind ebenfalls möglich.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Bietet ihr auch Kinderhaaarschnitte an?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Ja! Kinderhaarschnitte bieten wir ab 15 € an. Für Kinder unter 10 Jahren dauert ein Schnitt ca. 15–20 Minuten.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Gibt es Parkplätze in der Nähe?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Direkt vor dem Salon gibt es Parkplätze an der Straße. Alternativ befindet sich ein Parkhaus nur 2 Minuten Fußweg entfernt.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- ===== CONTACT ===== -->
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-header">
@@ -304,25 +521,21 @@
             <div class="contact-icon">&#128222;</div>
             <div>
               <h4>Telefon</h4>
-              <p>030 / 123 456 78</p>
+              <p><a href="tel:+493012345678">030 / 123 456 78</a></p>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon">&#128231;</div>
             <div>
               <h4>E-Mail</h4>
-              <p>info@stylefactory.de</p>
+              <p><a href="mailto:info@stylefactory.de">info@stylefactory.de</a></p>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon">&#128336;</div>
             <div>
               <h4>Öffnungszeiten</h4>
-              <p>
-                Mo – Fr: 9:00 – 19:00 Uhr<br>
-                Sa: 9:00 – 16:00 Uhr<br>
-                So: Geschlossen
-              </p>
+              <p>Mo – Fr: 9:00 – 19:00 Uhr<br>Sa: 9:00 – 16:00 Uhr<br>So: Geschlossen</p>
             </div>
           </div>
         </div>
@@ -336,20 +549,35 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
+      <div class="footer-grid">
         <div class="footer-brand">
-          <span class="logo-icon">&#9986;</span>
-          <span class="logo-text">Stylefactory</span>
+          <div class="logo">
+            <span class="logo-icon">&#9986;</span>
+            <span class="logo-text">Stylefactory</span>
+          </div>
           <p>Dein Styling. Dein Statement. Dein Studio.</p>
         </div>
-        <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigation</h4>
           <a href="#services">Leistungen</a>
           <a href="#booking">Termin buchen</a>
-          <a href="#about">Über uns</a>
-          <a href="#contact">Kontakt</a>
+          <a href="#team">Team</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <a href="tel:+493012345678">030 / 123 456 78</a>
+          <a href="mailto:info@stylefactory.de">info@stylefactory.de</a>
+          <p>Musterstraße 12, Berlin</p>
+        </div>
+        <div class="footer-col">
+          <h4>Öffnungszeiten</h4>
+          <p>Mo – Fr: 9 – 19 Uhr</p>
+          <p>Sa: 9 – 16 Uhr</p>
+          <p>So: Geschlossen</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -357,6 +585,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- ===== TOAST CONTAINER ===== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Nach oben scrollen">&#8593;</button>
 
   <script src="app.js"></script>
 </body>
