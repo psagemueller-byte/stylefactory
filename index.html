@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylefactory – Dein Friseur Studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo">
+        <span class="logo-icon">&#9986;</span>
+        <span class="logo-text">Stylefactory</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Leistungen</a></li>
+        <li><a href="#booking">Termin buchen</a></li>
+        <li><a href="#about">Über uns</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Willkommen bei<br><span class="highlight">Stylefactory</span></h1>
+      <p class="hero-subtitle">Dein Styling. Dein Statement. Dein Studio.</p>
+      <a href="#booking" class="btn btn-primary">Jetzt Termin buchen</a>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Unsere Leistungen</span>
+        <h2>Was wir für dich tun</h2>
+        <p>Von klassisch bis trendig – wir bringen deinen Style auf das nächste Level.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">&#9986;</div>
+          <h3>Herrenschnitt</h3>
+          <div class="service-meta">
+            <span class="service-duration">15 Min.</span>
+            <span class="service-price">25 €</span>
+          </div>
+          <p>Klassischer oder moderner Schnitt – perfekt auf dich abgestimmt.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">&#10024;</div>
+          <h3>Damenschnitt</h3>
+          <div class="service-meta">
+            <span class="service-duration">45 Min.</span>
+            <span class="service-price">45 €</span>
+          </div>
+          <p>Waschen, schneiden, föhnen – für deinen perfekten Look.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">&#127912;</div>
+          <h3>Färben / Strähnen</h3>
+          <div class="service-meta">
+            <span class="service-duration">90 Min.</span>
+            <span class="service-price">75 €</span>
+          </div>
+          <p>Frische Farbe oder natürliche Highlights für strahlende Haare.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">&#128161;</div>
+          <h3>Balayage</h3>
+          <div class="service-meta">
+            <span class="service-duration">120 Min.</span>
+            <span class="service-price">120 €</span>
+          </div>
+          <p>Natürlicher Farbverlauf für einen sonnengeküssten Look.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">&#127744;</div>
+          <h3>Dauerwelle</h3>
+          <div class="service-meta">
+            <span class="service-duration">120 Min.</span>
+            <span class="service-price">95 €</span>
+          </div>
+          <p>Volumen und Locken, die halten – von natürlichen Wellen bis Korkenzieher.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">&#128134;</div>
+          <h3>Bartpflege</h3>
+          <div class="service-meta">
+            <span class="service-duration">20 Min.</span>
+            <span class="service-price">18 €</span>
+          </div>
+          <p>Bartschnitt, Kontur und Pflege – für den gepflegten Gentleman.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">&#128131;</div>
+          <h3>Hochsteckfrisur</h3>
+          <div class="service-meta">
+            <span class="service-duration">60 Min.</span>
+            <span class="service-price">65 €</span>
+          </div>
+          <p>Für Hochzeiten, Events und besondere Anlässe – elegante Updos.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">&#9889;</div>
+          <h3>Keratin-Behandlung</h3>
+          <div class="service-meta">
+            <span class="service-duration">90 Min.</span>
+            <span class="service-price">110 €</span>
+          </div>
+          <p>Glattes, seidiges Haar ohne Frizz – bis zu 3 Monate Wirkung.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="booking" id="booking">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Termin buchen</span>
+        <h2>Finde deinen Wunschtermin</h2>
+        <p>Wähle deine Leistung, deinen Wunschtag und eine verfügbare Uhrzeit.</p>
+      </div>
+
+      <div class="booking-container">
+        <!-- Step Indicator -->
+        <div class="booking-steps">
+          <div class="step active" data-step="1">
+            <div class="step-number">1</div>
+            <span>Leistung</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step" data-step="2">
+            <div class="step-number">2</div>
+            <span>Datum & Zeit</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step" data-step="3">
+            <div class="step-number">3</div>
+            <span>Bestätigung</span>
+          </div>
+        </div>
+
+        <!-- Step 1: Service Selection -->
+        <div class="booking-step" id="step1">
+          <h3>Wähle deine Leistung</h3>
+          <div class="service-select-grid" id="serviceSelect">
+            <!-- Filled by JS -->
+          </div>
+        </div>
+
+        <!-- Step 2: Date & Time -->
+        <div class="booking-step hidden" id="step2">
+          <h3>Wähle Datum & Uhrzeit</h3>
+          <div class="datetime-container">
+            <div class="calendar-wrapper">
+              <div class="calendar-header">
+                <button class="cal-nav" id="prevMonth" aria-label="Vorheriger Monat">&#8249;</button>
+                <span id="calMonthYear"></span>
+                <button class="cal-nav" id="nextMonth" aria-label="Nächster Monat">&#8250;</button>
+              </div>
+              <div class="calendar-weekdays">
+                <span>Mo</span><span>Di</span><span>Mi</span><span>Do</span><span>Fr</span><span>Sa</span><span>So</span>
+              </div>
+              <div class="calendar-days" id="calDays"></div>
+            </div>
+            <div class="time-wrapper">
+              <h4>Verfügbare Zeiten</h4>
+              <p class="time-hint" id="timeHint">Bitte wähle zuerst ein Datum.</p>
+              <div class="time-slots" id="timeSlots"></div>
+            </div>
+          </div>
+          <div class="booking-nav">
+            <button class="btn btn-outline" id="backToStep1">Zurück</button>
+            <button class="btn btn-primary" id="toStep3" disabled>Weiter</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Confirmation -->
+        <div class="booking-step hidden" id="step3">
+          <h3>Deine Buchungsdetails</h3>
+          <div class="confirmation-card">
+            <div class="confirm-row">
+              <span class="confirm-label">Leistung</span>
+              <span class="confirm-value" id="confirmService"></span>
+            </div>
+            <div class="confirm-row">
+              <span class="confirm-label">Dauer</span>
+              <span class="confirm-value" id="confirmDuration"></span>
+            </div>
+            <div class="confirm-row">
+              <span class="confirm-label">Preis</span>
+              <span class="confirm-value" id="confirmPrice"></span>
+            </div>
+            <div class="confirm-row">
+              <span class="confirm-label">Datum</span>
+              <span class="confirm-value" id="confirmDate"></span>
+            </div>
+            <div class="confirm-row">
+              <span class="confirm-label">Uhrzeit</span>
+              <span class="confirm-value" id="confirmTime"></span>
+            </div>
+          </div>
+          <div class="confirm-form">
+            <input type="text" id="customerName" placeholder="Dein Name" required>
+            <input type="tel" id="customerPhone" placeholder="Telefonnummer" required>
+            <input type="email" id="customerEmail" placeholder="E-Mail (optional)">
+          </div>
+          <div class="booking-nav">
+            <button class="btn btn-outline" id="backToStep2">Zurück</button>
+            <button class="btn btn-primary" id="confirmBooking">Termin buchen</button>
+          </div>
+        </div>
+
+        <!-- Success -->
+        <div class="booking-step hidden" id="stepSuccess">
+          <div class="success-message">
+            <div class="success-icon">&#10003;</div>
+            <h3>Termin gebucht!</h3>
+            <p>Vielen Dank! Wir haben deinen Termin vorgemerkt.<br>Du erhältst eine Bestätigung per E-Mail oder Telefon.</p>
+            <button class="btn btn-primary" id="newBooking">Neuen Termin buchen</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="about-image-placeholder">
+            <span>&#9986;</span>
+            <p>Stylefactory</p>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-tag">Über uns</span>
+          <h2>Mehr als nur ein Haarschnitt</h2>
+          <p>Bei <strong>Stylefactory</strong> steht dein individueller Style im Mittelpunkt. Unser erfahrenes Team aus leidenschaftlichen Stylisten verbindet handwerkliches Können mit aktuellen Trends.</p>
+          <p>In unserem modernen Studio erwartet dich eine entspannte Atmosphäre, in der du dich wohlfühlen kannst – von der Beratung bis zum fertigen Ergebnis.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Jahre Erfahrung</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">5.000+</span>
+              <span class="stat-label">Zufriedene Kunden</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Top-Stylisten</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Kontakt</span>
+        <h2>Besuche uns</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">&#128205;</div>
+            <div>
+              <h4>Adresse</h4>
+              <p>Musterstraße 12<br>10115 Berlin</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">&#128222;</div>
+            <div>
+              <h4>Telefon</h4>
+              <p>030 / 123 456 78</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">&#128231;</div>
+            <div>
+              <h4>E-Mail</h4>
+              <p>info@stylefactory.de</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">&#128336;</div>
+            <div>
+              <h4>Öffnungszeiten</h4>
+              <p>
+                Mo – Fr: 9:00 – 19:00 Uhr<br>
+                Sa: 9:00 – 16:00 Uhr<br>
+                So: Geschlossen
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <div class="map-placeholder">
+            <span>&#127759;</span>
+            <p>Karte – Google Maps Integration</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-icon">&#9986;</span>
+          <span class="logo-text">Stylefactory</span>
+          <p>Dein Styling. Dein Statement. Dein Studio.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#services">Leistungen</a>
+          <a href="#booking">Termin buchen</a>
+          <a href="#about">Über uns</a>
+          <a href="#contact">Kontakt</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stylefactory. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
